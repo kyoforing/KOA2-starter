@@ -8,7 +8,7 @@ const router = module.exports = new Router();
 
 router.get('/test', async (ctx) => {
 
-    //You can remove annotation if you maintain db config and create table 'useracount'
+    //You can remove annotation if you maintain db config and create table 'useraccount'
     /*
     let countResult = await knex('useraccount').count('* as count')
     .then((rows) => {
