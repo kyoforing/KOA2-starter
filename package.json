@@ -31,7 +31,7 @@
   },
   "license": "UNLICENSED ",
   "dependencies": {
-    "dompurify": "^0.8.5",
+    "dompurify": "^2.0.8",
     "dotenv": "^4.0.0",
     "jsdom": "^9.12.0",
     "jsonwebtoken": "^7.4.0",
