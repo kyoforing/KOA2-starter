@@ -9,7 +9,6 @@ describe('POST /user', () => {
         };
         const response = await request(app.callback()).post('/user').send(body);
 
-        console.log(response);
         expect(response.status).toEqual(200)
         expect(response.body.data.userId).toBe(1);
         expect(response.body.data.userName).toBe('kyo');
