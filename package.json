@@ -11,7 +11,8 @@
     "start-dev": "better-npm-run start-dev",
     "start-stage": "better-npm-run start-stage",
     "start-pst": "better-npm-run start-pst",
-    "start-prod": "better-npm-run start-prod"
+    "start-prod": "better-npm-run start-prod",
+    "test": "jest"
   },
   "betterScripts": {
     "start-dev": {
@@ -52,7 +53,9 @@
     "node": "7.10.1"
   },
   "devDependencies": {
+    "better-npm-run": "0.0.13",
     "ejs": "^2.5.6",
-    "better-npm-run": "0.0.13"
+    "jest": "^26.6.0",
+    "supertest": "^5.0.0"
   }
 }

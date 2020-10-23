@@ -6,7 +6,3 @@ if (env === 'development') {
 } else if (env === 'production') {
     dotenv.config({ path: '.env.production' });
 }
-
-if (!process.env.VERSION) {
-    throw new Error('Can not find configuration file!');
-}

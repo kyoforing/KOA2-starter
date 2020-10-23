@@ -3,17 +3,11 @@ const env = process.env.NODE_ENV || 'development';
 const helmet = require('koa-helmet');
 const logger = require('koa-morgan');
 const koa = require('koa');
-const Router = require('koa-router');
 const cors = require('koa2-cors');
 const bodyParser = require('koa-bodyparser');
-const jwt = require('jsonwebtoken');
-const summary = require('./router/summary');
+const user = require('./router/user').router;
 const Format = require('./lib/format.js');
 const koaSanitized = require('./lib/koa-sanitized.js');
-
-if (!process.env.VERSION) {
-    throw new Error('Can not find configuration file!');
-}
 
 // Create a web service
 const app = new koa();
@@ -85,7 +79,7 @@ app.use(async (ctx, next) => {
 });
 
 // Route Config
-app.use(summary.routes());
+app.use(user.routes());
 
 let port_setting = 8080;
 app.listen(port_setting, () => {
@@ -95,3 +89,5 @@ app.listen(port_setting, () => {
 app.on('error', (err) => {
     console.error('server error', err);
 });
+
+module.exports = app;
